@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,265 +14,268 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f7;
-            padding: 10px;
-            padding-bottom: 80px;
-            min-height: 100vh;
-        }
+```
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #f5f5f7;
+        padding: 8px;
+        padding-bottom: 60px;
+        min-height: 100vh;
+    }
 
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-        }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 12px;
-        }
+    .header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
-        .header h1 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
+    .header h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
 
-        .mode-toggle {
-            display: flex;
-            background: white;
-            border-radius: 12px;
-            padding: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
+    .mode-toggle {
+        display: flex;
+        background: white;
+        border-radius: 12px;
+        padding: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
 
-        .mode-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: transparent;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+    .mode-btn {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        background: transparent;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
 
-        .mode-btn.active {
-            background: #34c759;
-            color: white;
-        }
+    .mode-btn.active {
+        background: #34c759;
+        color: white;
+    }
 
-        .calculator {
-            background: white;
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+    .calculator {
+        background: white;
+        border-radius: 16px;
+        padding: 12px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
 
-        .form-group {
-            margin-bottom: 12px;
-        }
+    .form-group {
+        margin-bottom: 8px;
+    }
 
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 500;
-            margin-bottom: 4px;
-            color: #1d1d1f;
-        }
+    .form-group label {
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 3px;
+        color: #1d1d1f;
+    }
 
-        .input-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
 
-        .input-wrapper input {
-            width: 100%;
-            padding: 10px 40px 10px 12px;
-            border: 1px solid #d2d2d7;
-            border-radius: 8px;
-            font-size: 15px;
-            background: #f5f5f7;
-        }
+    .input-wrapper input {
+        width: 100%;
+        padding: 8px 40px 8px 12px;
+        border: 1px solid #d2d2d7;
+        border-radius: 8px;
+        font-size: 15px;
+        background: #f5f5f7;
+    }
 
-        .input-wrapper .suffix {
-            position: absolute;
-            right: 12px;
-            color: #86868b;
-            font-size: 15px;
-            pointer-events: none;
-        }
+    .input-wrapper .suffix {
+        position: absolute;
+        right: 12px;
+        color: #86868b;
+        font-size: 15px;
+        pointer-events: none;
+    }
 
-        .frequency-selector {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 4px;
-            background: #f5f5f7;
-            padding: 4px;
-            border-radius: 8px;
-        }
+    .frequency-selector {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        background: #f5f5f7;
+        padding: 4px;
+        border-radius: 8px;
+    }
 
-        .frequency-btn {
-            padding: 8px 6px;
-            border: none;
-            background: white;
-            border-radius: 6px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
+    .frequency-btn {
+        padding: 8px 6px;
+        border: none;
+        background: white;
+        border-radius: 6px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
 
-        .frequency-btn.active {
-            background: #34c759;
-            color: white;
-        }
+    .frequency-btn.active {
+        background: #34c759;
+        color: white;
+    }
 
-        .results {
-            background: white;
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+    .results {
+        background: white;
+        border-radius: 16px;
+        padding: 12px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
 
-        .result-item {
-            margin-bottom: 12px;
-        }
+    .result-item {
+        margin-bottom: 10px;
+    }
 
-        .result-item:last-child {
-            margin-bottom: 0;
-        }
+    .result-item:last-child {
+        margin-bottom: 0;
+    }
 
-        .result-label {
-            font-size: 13px;
-            color: #86868b;
-            margin-bottom: 2px;
-        }
+    .result-label {
+        font-size: 13px;
+        color: #86868b;
+        margin-bottom: 2px;
+    }
 
-        .result-value {
-            font-size: 24px;
-            font-weight: 600;
-            color: #34c759;
-        }
+    .result-value {
+        font-size: 24px;
+        font-weight: 600;
+        color: #34c759;
+    }
 
-        .result-value.secondary {
-            font-size: 20px;
-            color: #1d1d1f;
-        }
+    .result-value.secondary {
+        font-size: 20px;
+        color: #1d1d1f;
+    }
 
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+    .action-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
 
-        .btn {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
+    .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
 
-        .btn-primary {
-            background: #34c759;
-            color: white;
-        }
+    .btn-primary {
+        background: #34c759;
+        color: white;
+    }
 
-        .btn-primary:active {
-            transform: scale(0.98);
-        }
+    .btn-primary:active {
+        transform: scale(0.98);
+    }
 
-        .btn-secondary {
-            background: white;
-            color: #34c759;
-            border: 2px solid #34c759;
-        }
+    .btn-secondary {
+        background: white;
+        color: #34c759;
+        border: 2px solid #34c759;
+    }
 
-        .chart-container {
-            background: white;
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            display: none;
-        }
+    .chart-container {
+        background: white;
+        border-radius: 16px;
+        padding: 16px;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        display: none;
+    }
 
-        .chart-container.visible {
-            display: block;
-        }
+    .chart-container.visible {
+        display: block;
+    }
 
-        .chart-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            text-align: center;
-        }
+    .chart-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        text-align: center;
+    }
 
-        canvas {
-            max-width: 100%;
-            height: auto;
-        }
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
 
-        .hidden {
-            display: none;
-        }
+    .hidden {
+        display: none;
+    }
 
-        .year-table-wrapper {
-            max-height: 400px;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
+    .year-table-wrapper {
+        max-height: 400px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-        .year-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-        }
+    .year-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
 
-        .year-table thead {
-            position: sticky;
-            top: 0;
-            background: white;
-            z-index: 10;
-        }
+    .year-table thead {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 10;
+    }
 
-        .year-table th {
-            padding: 10px 8px;
-            text-align: left;
-            font-weight: 600;
-            border-bottom: 2px solid #e5e5e7;
-            color: #1d1d1f;
-        }
+    .year-table th {
+        padding: 10px 8px;
+        text-align: left;
+        font-weight: 600;
+        border-bottom: 2px solid #e5e5e7;
+        color: #1d1d1f;
+    }
 
-        .year-table td {
-            padding: 10px 8px;
-            border-bottom: 1px solid #f5f5f7;
-        }
+    .year-table td {
+        padding: 10px 8px;
+        border-bottom: 1px solid #f5f5f7;
+    }
 
-        .year-table tbody tr:hover {
-            background: #f9f9f9;
-        }
+    .year-table tbody tr:hover {
+        background: #f9f9f9;
+    }
 
-        .year-table .year-col {
-            font-weight: 500;
-        }
+    .year-table .year-col {
+        font-weight: 500;
+    }
 
-        .year-table .balance-col {
-            color: #34c759;
-            font-weight: 600;
-        }
+    .year-table .balance-col {
+        color: #34c759;
+        font-weight: 600;
+    }
 
-        .year-table .contrib-col {
-            color: #86868b;
-        }
-    </style>
+    .year-table .contrib-col {
+        color: #86868b;
+    }
+</style>
+```
+
 </head>
 <body>
     <div class="container">
@@ -283,549 +287,588 @@
             </div>
         </div>
 
-        <!-- Growth Mode Calculator -->
-        <div class="calculator" id="growth-calc">
-            <div class="form-group">
-                <label>Starting Balance</label>
-                <div class="input-wrapper">
-                    <input type="number" id="growth-balance" value="0" step="1000">
-                    <span class="suffix">$</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Annual Return Rate</label>
-                <div class="input-wrapper">
-                    <input type="number" id="growth-rate" value="7" step="0.1">
-                    <span class="suffix">%</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Duration</label>
-                <div class="input-wrapper">
-                    <input type="number" id="growth-duration" value="20" step="1">
-                    <span class="suffix">years</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Periodic Addition</label>
-                <div class="input-wrapper">
-                    <input type="number" id="growth-addition" value="1000" step="100">
-                    <span class="suffix">$</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Addition Frequency</label>
-                <div class="frequency-selector">
-                    <button class="frequency-btn" data-freq="yearly">Yearly</button>
-                    <button class="frequency-btn" data-freq="quarterly">Quarterly</button>
-                    <button class="frequency-btn active" data-freq="monthly">Monthly</button>
-                    <button class="frequency-btn" data-freq="weekly">Weekly</button>
-                </div>
+```
+    <!-- Growth Mode Calculator -->
+    <div class="calculator" id="growth-calc">
+        <div class="form-group">
+            <label>Starting Balance</label>
+            <div class="input-wrapper">
+                <input type="number" id="growth-balance" value="0" step="1000">
+                <span class="suffix">$</span>
             </div>
         </div>
 
-        <!-- Withdrawal Mode Calculator -->
-        <div class="calculator hidden" id="withdrawal-calc">
-            <div class="form-group">
-                <label>Starting Balance</label>
-                <div class="input-wrapper">
-                    <input type="number" id="withdrawal-balance" value="1500000" step="10000">
-                    <span class="suffix">$</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Annual Return Rate</label>
-                <div class="input-wrapper">
-                    <input type="number" id="withdrawal-rate" value="3" step="0.1">
-                    <span class="suffix">%</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Duration</label>
-                <div class="input-wrapper">
-                    <input type="number" id="withdrawal-duration" value="30" step="1">
-                    <span class="suffix">years</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Periodic Withdrawal</label>
-                <div class="input-wrapper">
-                    <input type="number" id="withdrawal-amount" value="70000" step="1000">
-                    <span class="suffix">$</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Inflation Adjustment</label>
-                <div class="input-wrapper">
-                    <input type="number" id="withdrawal-inflation" value="0" step="0.1">
-                    <span class="suffix">%</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Withdrawal Frequency</label>
-                <div class="frequency-selector">
-                    <button class="frequency-btn active" data-freq="yearly">Yearly</button>
-                    <button class="frequency-btn" data-freq="quarterly">Quarterly</button>
-                    <button class="frequency-btn" data-freq="monthly">Monthly</button>
-                    <button class="frequency-btn" data-freq="weekly">Weekly</button>
-                </div>
+        <div class="form-group">
+            <label>Annual Return Rate</label>
+            <div class="input-wrapper">
+                <input type="number" id="growth-rate" value="7" step="0.1">
+                <span class="suffix">%</span>
             </div>
         </div>
 
-        <!-- Results Section -->
-        <div class="results" id="results">
-            <div class="result-item">
-                <div class="result-label" id="result-label-1">Investment Value</div>
-                <div class="result-value" id="result-value-1">$520,926.66</div>
-            </div>
-            <div class="result-item">
-                <div class="result-label" id="result-label-2">Contributions</div>
-                <div class="result-value secondary" id="result-value-2">$240,000.00</div>
-            </div>
-            <div class="result-item">
-                <div class="result-label" id="result-label-3">Profit</div>
-                <div class="result-value secondary" id="result-value-3">$280,926.66</div>
+        <div class="form-group">
+            <label>Duration</label>
+            <div class="input-wrapper">
+                <input type="number" id="growth-duration" value="20" step="1">
+                <span class="suffix">years</span>
             </div>
         </div>
 
-        <!-- Action Buttons -->
-        <div class="action-buttons">
-            <button class="btn btn-primary" id="build-graph">Build Graph</button>
-            <button class="btn btn-primary" id="value-by-year">Value by Year</button>
-            <button class="btn btn-secondary" id="reset">Reset</button>
+        <div class="form-group">
+            <label>Periodic Addition</label>
+            <div class="input-wrapper">
+                <input type="number" id="growth-addition" value="1000" step="100">
+                <span class="suffix">$</span>
+            </div>
         </div>
 
-        <!-- Chart Container -->
-        <div class="chart-container" id="chart-container">
-            <div class="chart-title">Growth Over Time</div>
-            <canvas id="myChart"></canvas>
-        </div>
-
-        <!-- Value by Year Container -->
-        <div class="chart-container" id="year-table-container">
-            <div class="chart-title" id="year-table-title">Value by Year</div>
-            <div class="year-table-wrapper">
-                <table class="year-table" id="year-table">
-                    <thead>
-                        <tr>
-                            <th>Year</th>
-                            <th>Balance</th>
-                            <th id="col-3-header">Contributions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="year-table-body">
-                    </tbody>
-                </table>
+        <div class="form-group">
+            <label>Addition Frequency</label>
+            <div class="frequency-selector">
+                <button class="frequency-btn" data-freq="yearly">Yearly</button>
+                <button class="frequency-btn" data-freq="quarterly">Quarterly</button>
+                <button class="frequency-btn active" data-freq="monthly">Monthly</button>
+                <button class="frequency-btn" data-freq="weekly">Weekly</button>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        let currentMode = 'growth';
-        let currentFrequency = { growth: 'monthly', withdrawal: 'yearly' };
-        let chartInstance = null;
+    <!-- Withdrawal Mode Calculator -->
+    <div class="calculator hidden" id="withdrawal-calc">
+        <div class="form-group">
+            <label>Starting Balance</label>
+            <div class="input-wrapper">
+                <input type="number" id="withdrawal-balance" value="1500000" step="10000">
+                <span class="suffix">$</span>
+            </div>
+        </div>
 
-        // Mode toggle
-        document.querySelectorAll('.mode-btn').forEach(btn => {
+        <div class="form-group">
+            <label>Annual Return Rate</label>
+            <div class="input-wrapper">
+                <input type="number" id="withdrawal-rate" value="3" step="0.1">
+                <span class="suffix">%</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Duration</label>
+            <div class="input-wrapper">
+                <input type="number" id="withdrawal-duration" value="30" step="1">
+                <span class="suffix">years</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Periodic Withdrawal</label>
+            <div class="input-wrapper">
+                <input type="number" id="withdrawal-amount" value="70000" step="1000">
+                <span class="suffix">$</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Inflation Adjustment</label>
+            <div class="input-wrapper">
+                <input type="number" id="withdrawal-inflation" value="0" step="0.1">
+                <span class="suffix">%</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Withdrawal Frequency</label>
+            <div class="frequency-selector">
+                <button class="frequency-btn active" data-freq="yearly">Yearly</button>
+                <button class="frequency-btn" data-freq="quarterly">Quarterly</button>
+                <button class="frequency-btn" data-freq="monthly">Monthly</button>
+                <button class="frequency-btn" data-freq="weekly">Weekly</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="results" id="results">
+        <div class="result-item">
+            <div class="result-label" id="result-label-1">Investment Value</div>
+            <div class="result-value" id="result-value-1">$520,926.66</div>
+        </div>
+        <div class="result-item">
+            <div class="result-label" id="result-label-2">Contributions</div>
+            <div class="result-value secondary" id="result-value-2">$240,000.00</div>
+        </div>
+        <div class="result-item">
+            <div class="result-label" id="result-label-3">Profit</div>
+            <div class="result-value secondary" id="result-value-3">$280,926.66</div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="btn btn-primary" id="build-graph">Build Graph</button>
+        <button class="btn btn-primary" id="value-by-year">Value by Year</button>
+        <button class="btn btn-secondary" id="reset">Reset</button>
+    </div>
+
+    <!-- Chart Container -->
+    <div class="chart-container" id="chart-container">
+        <div class="chart-title">Growth Over Time</div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Value by Year Container -->
+    <div class="chart-container" id="year-table-container">
+        <div class="chart-title" id="year-table-title">Value by Year</div>
+        <div class="year-table-wrapper">
+            <table class="year-table" id="year-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Balance</th>
+                        <th id="col-3-header">Contributions</th>
+                    </tr>
+                </thead>
+                <tbody id="year-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    let currentMode = 'growth';
+    let currentFrequency = { growth: 'monthly', withdrawal: 'yearly' };
+    let chartInstance = null;
+
+    // Mode toggle
+    document.querySelectorAll('.mode-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentMode = btn.dataset.mode;
+            
+            document.getElementById('growth-calc').classList.toggle('hidden', currentMode !== 'growth');
+            document.getElementById('withdrawal-calc').classList.toggle('hidden', currentMode !== 'withdrawal');
+            
+            calculate();
+        });
+    });
+
+    // Frequency selector
+    document.querySelectorAll('.frequency-selector').forEach(selector => {
+        selector.querySelectorAll('.frequency-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+                selector.querySelectorAll('.frequency-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                currentMode = btn.dataset.mode;
-                
-                document.getElementById('growth-calc').classList.toggle('hidden', currentMode !== 'growth');
-                document.getElementById('withdrawal-calc').classList.toggle('hidden', currentMode !== 'withdrawal');
-                
+                currentFrequency[currentMode] = btn.dataset.freq;
                 calculate();
             });
         });
+    });
 
-        // Frequency selector
-        document.querySelectorAll('.frequency-selector').forEach(selector => {
-            selector.querySelectorAll('.frequency-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    selector.querySelectorAll('.frequency-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentFrequency[currentMode] = btn.dataset.freq;
-                    calculate();
-                });
-            });
-        });
+    // Input listeners
+    document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('input', calculate);
+    });
 
-        // Input listeners
-        document.querySelectorAll('input').forEach(input => {
-            input.addEventListener('input', calculate);
-        });
+    // Format currency inputs with commas
+    function formatNumberWithCommas(value) {
+        // Remove all non-numeric characters except decimal point
+        const numericValue = value.replace(/[^\d.]/g, '');
+        // Split into integer and decimal parts
+        const parts = numericValue.split('.');
+        // Add commas to integer part
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        return parts.join('.');
+    }
 
-        // Frequency multipliers
-        const frequencyMultipliers = {
-            yearly: 1,
-            quarterly: 4,
-            monthly: 12,
-            weekly: 52
-        };
+    function removeCommas(value) {
+        return value.replace(/,/g, '');
+    }
 
-        function calculate() {
-            if (currentMode === 'growth') {
-                calculateGrowth();
-            } else {
-                calculateWithdrawal();
+    // Add comma formatting to specific input fields
+    const currencyInputs = [
+        document.getElementById('growth-balance'),
+        document.getElementById('growth-addition'),
+        document.getElementById('withdrawal-balance'),
+        document.getElementById('withdrawal-amount')
+    ];
+
+    currencyInputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            const rawValue = removeCommas(this.value);
+            if (rawValue && !isNaN(rawValue)) {
+                this.value = formatNumberWithCommas(rawValue);
             }
-        }
+        });
 
-        function calculateGrowth() {
-            const startBalance = parseFloat(document.getElementById('growth-balance').value) || 0;
-            const annualRate = (parseFloat(document.getElementById('growth-rate').value) || 0) / 100;
-            const years = parseFloat(document.getElementById('growth-duration').value) || 0;
-            const addition = parseFloat(document.getElementById('growth-addition').value) || 0;
-            const freq = currentFrequency.growth;
-            const periodsPerYear = frequencyMultipliers[freq];
+        input.addEventListener('focus', function() {
+            this.value = removeCommas(this.value);
+        });
+    });
+
+    // Frequency multipliers
+    const frequencyMultipliers = {
+        yearly: 1,
+        quarterly: 4,
+        monthly: 12,
+        weekly: 52
+    };
+
+    function calculate() {
+        if (currentMode === 'growth') {
+            calculateGrowth();
+        } else {
+            calculateWithdrawal();
+        }
+    }
+
+    function calculateGrowth() {
+        const startBalance = parseFloat(removeCommas(document.getElementById('growth-balance').value)) || 0;
+        const annualRate = (parseFloat(document.getElementById('growth-rate').value) || 0) / 100;
+        const years = parseFloat(document.getElementById('growth-duration').value) || 0;
+        const addition = parseFloat(removeCommas(document.getElementById('growth-addition').value)) || 0;
+        const freq = currentFrequency.growth;
+        const periodsPerYear = frequencyMultipliers[freq];
+        
+        const ratePerPeriod = annualRate / periodsPerYear;
+        const totalPeriods = years * periodsPerYear;
+        
+        let balance = startBalance;
+        
+        for (let i = 0; i < totalPeriods; i++) {
+            balance = balance * (1 + ratePerPeriod) + addition;
+        }
+        
+        const totalContributions = startBalance + (addition * totalPeriods);
+        const profit = balance - totalContributions;
+        
+        document.getElementById('result-label-1').textContent = 'Investment Value';
+        document.getElementById('result-value-1').textContent = formatCurrency(balance);
+        document.getElementById('result-label-2').textContent = 'Contributions';
+        document.getElementById('result-value-2').textContent = formatCurrency(totalContributions);
+        document.getElementById('result-label-3').textContent = 'Profit';
+        document.getElementById('result-value-3').textContent = formatCurrency(profit);
+    }
+
+    function calculateWithdrawal() {
+        const startBalance = parseFloat(removeCommas(document.getElementById('withdrawal-balance').value)) || 0;
+        const annualRate = (parseFloat(document.getElementById('withdrawal-rate').value) || 0) / 100;
+        const years = parseFloat(document.getElementById('withdrawal-duration').value) || 0;
+        const withdrawal = parseFloat(removeCommas(document.getElementById('withdrawal-amount').value)) || 0;
+        const inflation = (parseFloat(document.getElementById('withdrawal-inflation').value) || 0) / 100;
+        const freq = currentFrequency.withdrawal;
+        const periodsPerYear = frequencyMultipliers[freq];
+        
+        const ratePerPeriod = annualRate / periodsPerYear;
+        const inflationPerPeriod = inflation / periodsPerYear;
+        const totalPeriods = years * periodsPerYear;
+        
+        let balance = startBalance;
+        let currentWithdrawal = withdrawal / periodsPerYear;
+        let totalWithdrawn = 0;
+        let timeToZero = totalPeriods;
+        
+        for (let i = 0; i < totalPeriods; i++) {
+            balance = balance * (1 + ratePerPeriod) - currentWithdrawal;
+            totalWithdrawn += currentWithdrawal;
             
-            const ratePerPeriod = annualRate / periodsPerYear;
-            const totalPeriods = years * periodsPerYear;
+            if (balance <= 0 && timeToZero === totalPeriods) {
+                timeToZero = i;
+                balance = 0;
+                break;
+            }
             
-            let balance = startBalance;
-            
-            for (let i = 0; i < totalPeriods; i++) {
+            currentWithdrawal *= (1 + inflationPerPeriod);
+        }
+        
+        document.getElementById('result-label-1').textContent = 'Ending Balance';
+        document.getElementById('result-value-1').textContent = formatCurrency(Math.max(0, balance));
+        document.getElementById('result-label-2').textContent = 'Total Withdrawal';
+        document.getElementById('result-value-2').textContent = formatCurrency(totalWithdrawn);
+        document.getElementById('result-label-3').textContent = 'Time to Zero';
+        document.getElementById('result-value-3').textContent = timeToZero >= totalPeriods ? 
+            `${years}+ years` : `${Math.ceil(timeToZero / periodsPerYear)} years`;
+    }
+
+    function formatCurrency(value) {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(value);
+    }
+
+    // Build Graph
+    document.getElementById('build-graph').addEventListener('click', () => {
+        const chartContainer = document.getElementById('chart-container');
+        chartContainer.classList.add('visible');
+        chartContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        buildChart();
+    });
+
+    // Value by Year
+    document.getElementById('value-by-year').addEventListener('click', () => {
+        const tableContainer = document.getElementById('year-table-container');
+        tableContainer.classList.add('visible');
+        tableContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        buildYearTable();
+    });
+
+    function buildYearTable() {
+        const tableBody = document.getElementById('year-table-body');
+        const col3Header = document.getElementById('col-3-header');
+        
+        tableBody.innerHTML = '';
+        
+        let data;
+        if (currentMode === 'growth') {
+            col3Header.textContent = 'Contributions';
+            data = generateGrowthYearData();
+        } else {
+            col3Header.textContent = 'Withdrawals';
+            data = generateWithdrawalYearData();
+        }
+        
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="year-col">${row.year}</td>
+                <td class="balance-col">${formatCurrency(row.balance)}</td>
+                <td class="contrib-col">${formatCurrency(row.cumulative)}</td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    }
+
+    function generateGrowthYearData() {
+        const startBalance = parseFloat(removeCommas(document.getElementById('growth-balance').value)) || 0;
+        const annualRate = (parseFloat(document.getElementById('growth-rate').value) || 0) / 100;
+        const years = parseFloat(document.getElementById('growth-duration').value) || 0;
+        const addition = parseFloat(removeCommas(document.getElementById('growth-addition').value)) || 0;
+        const freq = currentFrequency.growth;
+        const periodsPerYear = frequencyMultipliers[freq];
+        
+        const ratePerPeriod = annualRate / periodsPerYear;
+        
+        const data = [];
+        let balance = startBalance;
+        let totalContributions = startBalance;
+        
+        data.push({
+            year: 0,
+            balance: balance,
+            cumulative: totalContributions
+        });
+        
+        for (let year = 1; year <= years; year++) {
+            for (let period = 0; period < periodsPerYear; period++) {
                 balance = balance * (1 + ratePerPeriod) + addition;
+                totalContributions += addition;
             }
-            
-            const totalContributions = startBalance + (addition * totalPeriods);
-            const profit = balance - totalContributions;
-            
-            document.getElementById('result-label-1').textContent = 'Investment Value';
-            document.getElementById('result-value-1').textContent = formatCurrency(balance);
-            document.getElementById('result-label-2').textContent = 'Contributions';
-            document.getElementById('result-value-2').textContent = formatCurrency(totalContributions);
-            document.getElementById('result-label-3').textContent = 'Profit';
-            document.getElementById('result-value-3').textContent = formatCurrency(profit);
-        }
-
-        function calculateWithdrawal() {
-            const startBalance = parseFloat(document.getElementById('withdrawal-balance').value) || 0;
-            const annualRate = (parseFloat(document.getElementById('withdrawal-rate').value) || 0) / 100;
-            const years = parseFloat(document.getElementById('withdrawal-duration').value) || 0;
-            const withdrawal = parseFloat(document.getElementById('withdrawal-amount').value) || 0;
-            const inflation = (parseFloat(document.getElementById('withdrawal-inflation').value) || 0) / 100;
-            const freq = currentFrequency.withdrawal;
-            const periodsPerYear = frequencyMultipliers[freq];
-            
-            const ratePerPeriod = annualRate / periodsPerYear;
-            const inflationPerPeriod = inflation / periodsPerYear;
-            const totalPeriods = years * periodsPerYear;
-            
-            let balance = startBalance;
-            let currentWithdrawal = withdrawal / periodsPerYear;
-            let totalWithdrawn = 0;
-            let timeToZero = totalPeriods;
-            
-            for (let i = 0; i < totalPeriods; i++) {
-                balance = balance * (1 + ratePerPeriod) - currentWithdrawal;
-                totalWithdrawn += currentWithdrawal;
-                
-                if (balance <= 0 && timeToZero === totalPeriods) {
-                    timeToZero = i;
-                    balance = 0;
-                    break;
-                }
-                
-                currentWithdrawal *= (1 + inflationPerPeriod);
-            }
-            
-            document.getElementById('result-label-1').textContent = 'Ending Balance';
-            document.getElementById('result-value-1').textContent = formatCurrency(Math.max(0, balance));
-            document.getElementById('result-label-2').textContent = 'Total Withdrawal';
-            document.getElementById('result-value-2').textContent = formatCurrency(totalWithdrawn);
-            document.getElementById('result-label-3').textContent = 'Time to Zero';
-            document.getElementById('result-value-3').textContent = timeToZero >= totalPeriods ? 
-                `${years}+ years` : `${Math.ceil(timeToZero / periodsPerYear)} years`;
-        }
-
-        function formatCurrency(value) {
-            return new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2
-            }).format(value);
-        }
-
-        // Build Graph
-        document.getElementById('build-graph').addEventListener('click', () => {
-            const chartContainer = document.getElementById('chart-container');
-            chartContainer.classList.add('visible');
-            chartContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            buildChart();
-        });
-
-        // Value by Year
-        document.getElementById('value-by-year').addEventListener('click', () => {
-            const tableContainer = document.getElementById('year-table-container');
-            tableContainer.classList.add('visible');
-            tableContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            buildYearTable();
-        });
-
-        function buildYearTable() {
-            const tableBody = document.getElementById('year-table-body');
-            const col3Header = document.getElementById('col-3-header');
-            
-            tableBody.innerHTML = '';
-            
-            let data;
-            if (currentMode === 'growth') {
-                col3Header.textContent = 'Contributions';
-                data = generateGrowthYearData();
-            } else {
-                col3Header.textContent = 'Withdrawals';
-                data = generateWithdrawalYearData();
-            }
-            
-            data.forEach(row => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td class="year-col">${row.year}</td>
-                    <td class="balance-col">${formatCurrency(row.balance)}</td>
-                    <td class="contrib-col">${formatCurrency(row.cumulative)}</td>
-                `;
-                tableBody.appendChild(tr);
-            });
-        }
-
-        function generateGrowthYearData() {
-            const startBalance = parseFloat(document.getElementById('growth-balance').value) || 0;
-            const annualRate = (parseFloat(document.getElementById('growth-rate').value) || 0) / 100;
-            const years = parseFloat(document.getElementById('growth-duration').value) || 0;
-            const addition = parseFloat(document.getElementById('growth-addition').value) || 0;
-            const freq = currentFrequency.growth;
-            const periodsPerYear = frequencyMultipliers[freq];
-            
-            const ratePerPeriod = annualRate / periodsPerYear;
-            
-            const data = [];
-            let balance = startBalance;
-            let totalContributions = startBalance;
             
             data.push({
-                year: 0,
+                year: year,
                 balance: balance,
                 cumulative: totalContributions
             });
-            
-            for (let year = 1; year <= years; year++) {
-                for (let period = 0; period < periodsPerYear; period++) {
-                    balance = balance * (1 + ratePerPeriod) + addition;
-                    totalContributions += addition;
-                }
+        }
+        
+        return data;
+    }
+
+    function generateWithdrawalYearData() {
+        const startBalance = parseFloat(removeCommas(document.getElementById('withdrawal-balance').value)) || 0;
+        const annualRate = (parseFloat(document.getElementById('withdrawal-rate').value) || 0) / 100;
+        const years = parseFloat(document.getElementById('withdrawal-duration').value) || 0;
+        const withdrawal = parseFloat(removeCommas(document.getElementById('withdrawal-amount').value)) || 0;
+        const inflation = (parseFloat(document.getElementById('withdrawal-inflation').value) || 0) / 100;
+        const freq = currentFrequency.withdrawal;
+        const periodsPerYear = frequencyMultipliers[freq];
+        
+        const ratePerPeriod = annualRate / periodsPerYear;
+        const inflationPerPeriod = inflation / periodsPerYear;
+        
+        const data = [];
+        let balance = startBalance;
+        let currentWithdrawal = withdrawal / periodsPerYear;
+        let totalWithdrawn = 0;
+        
+        data.push({
+            year: 0,
+            balance: balance,
+            cumulative: totalWithdrawn
+        });
+        
+        for (let year = 1; year <= years; year++) {
+            for (let period = 0; period < periodsPerYear; period++) {
+                balance = balance * (1 + ratePerPeriod) - currentWithdrawal;
+                totalWithdrawn += currentWithdrawal;
+                currentWithdrawal *= (1 + inflationPerPeriod);
                 
-                data.push({
-                    year: year,
-                    balance: balance,
-                    cumulative: totalContributions
-                });
+                if (balance < 0) {
+                    balance = 0;
+                    break;
+                }
             }
             
-            return data;
-        }
-
-        function generateWithdrawalYearData() {
-            const startBalance = parseFloat(document.getElementById('withdrawal-balance').value) || 0;
-            const annualRate = (parseFloat(document.getElementById('withdrawal-rate').value) || 0) / 100;
-            const years = parseFloat(document.getElementById('withdrawal-duration').value) || 0;
-            const withdrawal = parseFloat(document.getElementById('withdrawal-amount').value) || 0;
-            const inflation = (parseFloat(document.getElementById('withdrawal-inflation').value) || 0) / 100;
-            const freq = currentFrequency.withdrawal;
-            const periodsPerYear = frequencyMultipliers[freq];
-            
-            const ratePerPeriod = annualRate / periodsPerYear;
-            const inflationPerPeriod = inflation / periodsPerYear;
-            
-            const data = [];
-            let balance = startBalance;
-            let currentWithdrawal = withdrawal / periodsPerYear;
-            let totalWithdrawn = 0;
-            
             data.push({
-                year: 0,
-                balance: balance,
+                year: year,
+                balance: Math.max(0, balance),
                 cumulative: totalWithdrawn
             });
             
-            for (let year = 1; year <= years; year++) {
-                for (let period = 0; period < periodsPerYear; period++) {
-                    balance = balance * (1 + ratePerPeriod) - currentWithdrawal;
-                    totalWithdrawn += currentWithdrawal;
-                    currentWithdrawal *= (1 + inflationPerPeriod);
-                    
-                    if (balance < 0) {
-                        balance = 0;
-                        break;
-                    }
-                }
-                
-                data.push({
-                    year: year,
-                    balance: Math.max(0, balance),
-                    cumulative: totalWithdrawn
-                });
-                
-                if (balance <= 0) break;
-            }
-            
-            return data;
+            if (balance <= 0) break;
+        }
+        
+        return data;
+    }
+
+    function buildChart() {
+        const ctx = document.getElementById('myChart').getContext('2d');
+        
+        if (chartInstance) {
+            chartInstance.destroy();
         }
 
-        function buildChart() {
-            const ctx = document.getElementById('myChart').getContext('2d');
-            
-            if (chartInstance) {
-                chartInstance.destroy();
-            }
+        let data;
+        if (currentMode === 'growth') {
+            data = generateGrowthData();
+        } else {
+            data = generateWithdrawalData();
+        }
 
-            let data;
-            if (currentMode === 'growth') {
-                data = generateGrowthData();
-            } else {
-                data = generateWithdrawalData();
-            }
-
-            chartInstance = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: data.labels,
-                    datasets: [{
-                        label: 'Balance',
-                        data: data.values,
-                        borderColor: '#34c759',
-                        backgroundColor: 'rgba(52, 199, 89, 0.1)',
-                        borderWidth: 2,
-                        tension: 0.4,
-                        pointRadius: 4,
-                        pointBackgroundColor: '#34c759'
-                    }]
+        chartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: data.labels,
+                datasets: [{
+                    label: 'Balance',
+                    data: data.values,
+                    borderColor: '#34c759',
+                    backgroundColor: 'rgba(52, 199, 89, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#34c759'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            display: false
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + (value / 1000).toFixed(0) + 'K';
+                            }
                         }
                     },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: function(value) {
-                                    return '$' + (value / 1000).toFixed(0) + 'K';
-                                }
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Years'
-                            }
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Years'
                         }
                     }
                 }
-            });
-        }
-
-        function generateGrowthData() {
-            const startBalance = parseFloat(document.getElementById('growth-balance').value) || 0;
-            const annualRate = (parseFloat(document.getElementById('growth-rate').value) || 0) / 100;
-            const years = parseFloat(document.getElementById('growth-duration').value) || 0;
-            const addition = parseFloat(document.getElementById('growth-addition').value) || 0;
-            const freq = currentFrequency.growth;
-            const periodsPerYear = frequencyMultipliers[freq];
-            
-            const ratePerPeriod = annualRate / periodsPerYear;
-            
-            const labels = [];
-            const values = [];
-            
-            let balance = startBalance;
-            labels.push(0);
-            values.push(balance);
-            
-            for (let year = 1; year <= years; year++) {
-                for (let period = 0; period < periodsPerYear; period++) {
-                    balance = balance * (1 + ratePerPeriod) + addition;
-                }
-                labels.push(year);
-                values.push(balance);
             }
-            
-            return { labels, values };
-        }
-
-        function generateWithdrawalData() {
-            const startBalance = parseFloat(document.getElementById('withdrawal-balance').value) || 0;
-            const annualRate = (parseFloat(document.getElementById('withdrawal-rate').value) || 0) / 100;
-            const years = parseFloat(document.getElementById('withdrawal-duration').value) || 0;
-            const withdrawal = parseFloat(document.getElementById('withdrawal-amount').value) || 0;
-            const inflation = (parseFloat(document.getElementById('withdrawal-inflation').value) || 0) / 100;
-            const freq = currentFrequency.withdrawal;
-            const periodsPerYear = frequencyMultipliers[freq];
-            
-            const ratePerPeriod = annualRate / periodsPerYear;
-            const inflationPerPeriod = inflation / periodsPerYear;
-            
-            const labels = [];
-            const values = [];
-            
-            let balance = startBalance;
-            let currentWithdrawal = withdrawal / periodsPerYear;
-            
-            labels.push(0);
-            values.push(balance);
-            
-            for (let year = 1; year <= years; year++) {
-                for (let period = 0; period < periodsPerYear; period++) {
-                    balance = balance * (1 + ratePerPeriod) - currentWithdrawal;
-                    if (balance < 0) balance = 0;
-                    currentWithdrawal *= (1 + inflationPerPeriod);
-                }
-                labels.push(year);
-                values.push(Math.max(0, balance));
-                
-                if (balance <= 0) break;
-            }
-            
-            return { labels, values };
-        }
-
-        // Reset button
-        document.getElementById('reset').addEventListener('click', () => {
-            if (currentMode === 'growth') {
-                document.getElementById('growth-balance').value = 0;
-                document.getElementById('growth-rate').value = 7;
-                document.getElementById('growth-duration').value = 20;
-                document.getElementById('growth-addition').value = 1000;
-            } else {
-                document.getElementById('withdrawal-balance').value = 1500000;
-                document.getElementById('withdrawal-rate').value = 3;
-                document.getElementById('withdrawal-duration').value = 30;
-                document.getElementById('withdrawal-amount').value = 70000;
-                document.getElementById('withdrawal-inflation').value = 0;
-            }
-            document.getElementById('chart-container').classList.remove('visible');
-            document.getElementById('year-table-container').classList.remove('visible');
-            calculate();
         });
+    }
 
-        // Initial calculation
+    function generateGrowthData() {
+        const startBalance = parseFloat(removeCommas(document.getElementById('growth-balance').value)) || 0;
+        const annualRate = (parseFloat(document.getElementById('growth-rate').value) || 0) / 100;
+        const years = parseFloat(document.getElementById('growth-duration').value) || 0;
+        const addition = parseFloat(removeCommas(document.getElementById('growth-addition').value)) || 0;
+        const freq = currentFrequency.growth;
+        const periodsPerYear = frequencyMultipliers[freq];
+        
+        const ratePerPeriod = annualRate / periodsPerYear;
+        
+        const labels = [];
+        const values = [];
+        
+        let balance = startBalance;
+        labels.push(0);
+        values.push(balance);
+        
+        for (let year = 1; year <= years; year++) {
+            for (let period = 0; period < periodsPerYear; period++) {
+                balance = balance * (1 + ratePerPeriod) + addition;
+            }
+            labels.push(year);
+            values.push(balance);
+        }
+        
+        return { labels, values };
+    }
+
+    function generateWithdrawalData() {
+        const startBalance = parseFloat(removeCommas(document.getElementById('withdrawal-balance').value)) || 0;
+        const annualRate = (parseFloat(document.getElementById('withdrawal-rate').value) || 0) / 100;
+        const years = parseFloat(document.getElementById('withdrawal-duration').value) || 0;
+        const withdrawal = parseFloat(removeCommas(document.getElementById('withdrawal-amount').value)) || 0;
+        const inflation = (parseFloat(document.getElementById('withdrawal-inflation').value) || 0) / 100;
+        const freq = currentFrequency.withdrawal;
+        const periodsPerYear = frequencyMultipliers[freq];
+        
+        const ratePerPeriod = annualRate / periodsPerYear;
+        const inflationPerPeriod = inflation / periodsPerYear;
+        
+        const labels = [];
+        const values = [];
+        
+        let balance = startBalance;
+        let currentWithdrawal = withdrawal / periodsPerYear;
+        
+        labels.push(0);
+        values.push(balance);
+        
+        for (let year = 1; year <= years; year++) {
+            for (let period = 0; period < periodsPerYear; period++) {
+                balance = balance * (1 + ratePerPeriod) - currentWithdrawal;
+                if (balance < 0) balance = 0;
+                currentWithdrawal *= (1 + inflationPerPeriod);
+            }
+            labels.push(year);
+            values.push(Math.max(0, balance));
+            
+            if (balance <= 0) break;
+        }
+        
+        return { labels, values };
+    }
+
+    // Reset button
+    document.getElementById('reset').addEventListener('click', () => {
+        if (currentMode === 'growth') {
+            document.getElementById('growth-balance').value = 0;
+            document.getElementById('growth-rate').value = 7;
+            document.getElementById('growth-duration').value = 20;
+            document.getElementById('growth-addition').value = 1000;
+        } else {
+            document.getElementById('withdrawal-balance').value = 1500000;
+            document.getElementById('withdrawal-rate').value = 3;
+            document.getElementById('withdrawal-duration').value = 30;
+            document.getElementById('withdrawal-amount').value = 70000;
+            document.getElementById('withdrawal-inflation').value = 0;
+        }
+        document.getElementById('chart-container').classList.remove('visible');
+        document.getElementById('year-table-container').classList.remove('visible');
         calculate();
-    </script>
+    });
+
+    // Initial calculation
+    calculate();
+</script>
+```
+
 </body>
 </html>
